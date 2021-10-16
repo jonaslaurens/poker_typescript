@@ -12,9 +12,8 @@ const VALUES = {
   Queen: 12,
   King: 13,
   Ace: 14,
-}
+};
 
-const SUITS = ['Hearts', 'Spades', 'Diamonds', 'Clubs'];
+const SUITS: string[] = ['Hearts', 'Spades', 'Diamonds', 'Clubs'];
 
-
-export {VALUES, SUITS};
+export { VALUES, SUITS };
