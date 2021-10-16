@@ -1,0 +1,6 @@
+{
+  "eslint.workingDirectories": [
+    "src"
+  ],
+  "jest.jestCommandLine": "npm t"
+}
