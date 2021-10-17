@@ -1,6 +1,9 @@
 import { SUITS, VALUES } from '../constants/cardValues';
 import { Card } from './Card';
 
+/**
+ *
+ */
 export class Deck {
   public deck: Card[];
 
@@ -20,7 +23,7 @@ export class Deck {
   /**
    * @description creates a new deck of cards
    */
-  createDeck() {
+  createDeck(): void {
     SUITS.forEach((suit) => {
       Object.entries(VALUES).forEach((value) => {
         const newCard = new Card(value[1], suit);

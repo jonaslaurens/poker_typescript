@@ -1,6 +1,6 @@
 interface ICard {
-  value: string,
-  number: number
+  value: string;
+  number: number;
 }
 
-export {ICard};
+export { ICard };
