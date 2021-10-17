@@ -10,10 +10,6 @@ const app = express();
 
 const http = require('http').createServer(app);
 
-const dealer = new Dealer();
-
-console.log(dealer);
-
 app.use(cors());
 
 http.listen(3050, () => {
