@@ -1,17 +1,15 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { SUITS, VALUES } from '../constants/cardValues';
-import { ICard } from '../types/types';
 import { Card } from './Card';
 
 export class Dealer {
-  public deck: any;
+  public dealtCards: Card[];
 
-  public dealtCards: ICard[];
+  public deck: Card[];
 
   constructor() {
+    this.deck = [];
+
     this.createDeck();
 
     this.dealtCards = [];
@@ -21,7 +19,7 @@ export class Dealer {
    * @description creates a new deck of cards
    */
   createDeck(): void {
-    const newDeck: any[] = [];
+    const newDeck: Card[] = [];
 
     SUITS.forEach((suit) => {
       Object.entries(VALUES).forEach((value) => {
@@ -29,14 +27,12 @@ export class Dealer {
       });
     });
 
-    console.log(newDeck);
-
     this.deck = newDeck;
   }
 
   /**
    * @description Shuffles the current deck into a random order
-   * @returns {ICard[]} array of cards
+   * @returns {Card[]} array of cards
    */
   shuffleDeck(): any[] {
     for (let i = this.deck.length - 1; i > 0; i -= 1) {
@@ -48,19 +44,19 @@ export class Dealer {
 
   /**
    * @description Removes the last card from the deck, puts it into the dealtCards array and returns the same card
-   * @returns {ICard} returns one card from the deck
+   * @returns {Card} returns one card from the deck
    */
-  dealCard(): ICard {
-    const dealtCard = this.deck.pop();
+  dealCard(): Card {
+    const dealtCard: Card = this.deck.pop()!;
     this.dealtCards.push(dealtCard);
     return dealtCard;
   }
 
   /**
    * @description calls the function dealCard for a given amount of times
-   * @returns {ICard[]} returns array of cards from the deck
+   * @returns {Card[]} returns array of cards from the deck
    */
-  dealAmountOfCards(amount: number): ICard[] {
+  dealAmountOfCards(amount: number): Card[] {
     const newHand = [];
     for (let i = 0; i < amount; i += 1) {
       newHand.push(this.dealCard());

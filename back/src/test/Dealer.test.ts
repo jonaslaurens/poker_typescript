@@ -1,7 +1,7 @@
-import { Card } from "../model/Card";
-import { Dealer } from "../model/Dealer";
-import { Deck } from "../model/Deck";
-import { ICard } from "../types/types";
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { Card } from '../model/Card';
+import { Dealer } from '../model/Dealer';
+import { Deck } from '../model/Deck';
 
 describe('Dealer', () => {
   test('Dealer should be instantiated', () => {
@@ -11,7 +11,7 @@ describe('Dealer', () => {
   test('Dealer should create a deck containing Card objects', () => {
     const dealer = new Dealer();
 
-    const dealerCards = dealer.deck.every((card: ICard) => card instanceof Card);
+    const dealerCards = dealer.deck.every((card: Card) => card instanceof Card);
 
     expect(dealerCards).toEqual(true);
   });

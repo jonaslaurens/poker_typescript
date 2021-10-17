@@ -4,9 +4,9 @@
  * @param newSuit the suit of the playing card
  */
 export class Card {
-  public value: number;
+  readonly value: number;
 
-  public suit: string;
+  readonly suit: string;
 
   constructor(newValue: number, newSuit: string) {
     this.value = newValue;

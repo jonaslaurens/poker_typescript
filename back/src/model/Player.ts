@@ -1,7 +1,16 @@
-import { generateID } from "../utils/generateID";
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import generateID from '../utils/generateID';
 
+/**
+ * @classdesc represents a player
+ * @property { string } name the name of the player
+ * @property { string } id the id of the player
+ * @property { string } socket websocket of the player
+ * @property { number } credits the total credits of the player
+ * @property { number } bet the current bet of the player
+ */
 export class Player {
-
   public name: string;
 
   private id: string;
@@ -12,6 +21,10 @@ export class Player {
 
   public bet: number;
 
+  /**
+   * @param { string } name the name of the player
+   * @param { object } socket the websocket of the player
+   */
   constructor(name: string, socket: any) {
     this.name = name;
     this.id = generateID();
@@ -20,19 +33,33 @@ export class Player {
     this.bet = 0;
   }
 
-  getName() {
+  /**
+   * @description returns the name of the player
+   * @returns { string } name of the player
+   */
+  getName(): string {
     return this.name;
   }
 
-  setName(name: string) {
+  /**
+   * @param name string name of the player
+   * @returns {string} name of the player
+   */
+  setName(name: string): string {
     return (this.name = name);
   }
 
-  getPlayerID() {
+  /**
+   * @returns the id of the player
+   */
+  getPlayerID(): string {
     return this.id;
   }
 
-  toObject(): {name: string; id: string, credits: number} {
+  /**
+   * @returns a workable player object
+   */
+  toObject(): { name: string; id: string; credits: number } {
     return {
       name: this.name,
       id: this.id,

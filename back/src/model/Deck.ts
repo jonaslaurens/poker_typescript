@@ -1,9 +1,6 @@
 import { SUITS, VALUES } from '../constants/cardValues';
 import { Card } from './Card';
 
-/**
- *
- */
 export class Deck {
   public deck: Card[];
 

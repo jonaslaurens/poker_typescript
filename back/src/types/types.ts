@@ -1,6 +1,6 @@
-interface ICard {
-  value: string;
-  number: number;
-}
+// type ICard = {
+//   readonly value: string;
+//   readonly number: number;
+// };
 
-export { ICard };
+// export { ICard };

@@ -1,4 +1,4 @@
-import { Player } from "../model/Player";
+import { Player } from '../model/Player';
 
 describe('Tests for Player Model', () => {
   test('Player should be instantiated', () => {
