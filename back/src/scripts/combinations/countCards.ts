@@ -6,9 +6,9 @@ import { ICard } from "../../types/types";
  * @returns array which contains the total of each card occurring in the cards param
  */
 export const countCards = (cards: ICard[]): number[] => {
-  const counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  const counts: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
-  cards.forEach((card) => {
+  cards.forEach((card: ICard) => {
     if (card.value === 1) {
       return (counts[13] += 1);
     }
