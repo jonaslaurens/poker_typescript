@@ -1,6 +1,6 @@
-// type ICard = {
-//   readonly value: string;
-//   readonly number: number;
-// };
+type ICard = {
+  value: number;
+  suit: string;
+};
 
-// export { ICard };
+export { ICard };

@@ -1,8 +1,9 @@
 import { SUITS, VALUES } from '../constants/cardValues';
+import { ICard } from '../types/types';
 import { Card } from './Card';
 
 export class Deck {
-  public deck: Card[];
+  public deck: ICard[];
 
   constructor() {
     this.deck = [];
@@ -13,7 +14,7 @@ export class Deck {
    *
    * @returns {Card[]} Array of Cards
    */
-  getDeck(): Card[] {
+  getDeck(): ICard[] {
     return this.deck;
   }
 

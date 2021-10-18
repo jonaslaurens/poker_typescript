@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { ICard } from '../types/types';
 import generateID from '../utils/generateID';
 
 /**
@@ -21,6 +22,8 @@ export class Player {
 
   public bet: number;
 
+  public cards: ICard[];
+
   /**
    * @param { string } name the name of the player
    * @param { object } socket the websocket of the player
@@ -31,6 +34,7 @@ export class Player {
     this.socket = socket;
     this.credits = 0;
     this.bet = 0;
+    this.cards = [];
   }
 
   /**
@@ -54,6 +58,13 @@ export class Player {
    */
   getPlayerID(): string {
     return this.id;
+  }
+
+  /**
+   * @returns the current cards of the player
+   */
+  getCards(): ICard[] {
+    return this.cards;
   }
 
   /**

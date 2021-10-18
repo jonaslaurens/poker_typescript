@@ -1,11 +1,11 @@
-import { Card } from '../../model/Card';
+import { ICard } from "../../types/types";
 
 /**
  * @description counts the amount of cards
  * @param {object} cards contains all cards
  * @returns array which contains the total of each card occurring in the cards param
  */
-export const cardCounts = (cards: Card[]): number[] => {
+export const countCards = (cards: ICard[]): number[] => {
   const counts = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   cards.forEach((card) => {

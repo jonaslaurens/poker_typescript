@@ -1,7 +1,6 @@
 {
   "eslint.workingDirectories": [
-    "src"
+    "./src",
   ],
   "jest.jestCommandLine": "npm t --",
-  "jestrunner.jestCommand": "npm run test --"
 }
