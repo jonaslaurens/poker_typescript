@@ -1,6 +1,26 @@
-type ICard = {
+interface IResult {
+  name: string;
+  value: number;
+}
+interface ICard {
   value: number;
   suit: string;
-};
+}
 
-export { ICard };
+interface IPlayer {
+  name: string;
+  id: string;
+  socket: any;
+  credits: number;
+  bet: number;
+  cards: ICard[];
+  result: IResult;
+}
+
+interface IPlayerObject {
+  name: string;
+  cards: ICard[];
+  result?: IResult;
+}
+
+export { ICard, IPlayer, IPlayerObject };
