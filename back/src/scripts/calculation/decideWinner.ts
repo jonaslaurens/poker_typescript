@@ -1,8 +1,15 @@
-import { ICard, IPlayer, IPlayerObject } from "../../types/types";
+import { ICard, IPlayerObject, IWinner } from "../../types/types";
 import { groupCards } from "../combinations/groupCards";
 import { checkCombination } from "./checkcombination";
 
-export const decideWinner = (players: IPlayerObject[], communityCards: ICard[]) => {
+
+/**
+ * @description calculates which player in the players param won
+ * @param players All player objects who are still in the game and await a result
+ * @param communityCards array of cards from the table i.e. the community cards
+ * @returns object containing name, cards and result of the winner
+ */
+export const decideWinner = (players: IPlayerObject[], communityCards: ICard[]): IWinner => {
   const calculatedHands: IPlayerObject[] = [];
   let winner: any = {};
 

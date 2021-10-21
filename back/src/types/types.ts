@@ -23,4 +23,10 @@ interface IPlayerObject {
   result?: IResult;
 }
 
-export { ICard, IPlayer, IPlayerObject };
+interface IWinner {
+  name: string;
+  cards: ICard[];
+  result: IResult;
+}
+
+export { ICard, IPlayer, IPlayerObject, IResult, IWinner };
