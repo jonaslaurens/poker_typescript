@@ -7,6 +7,12 @@ interface ICard {
   suit: string;
 }
 
+interface IDealer {
+  dealtCards: ICard[];
+  deck: ICard[];
+  dealAmountOfCards(amount: number): ICard[];
+}
+
 interface IPlayer {
   name: string;
   id: string;
@@ -17,10 +23,25 @@ interface IPlayer {
   result: IResult;
 }
 
+export const instanceOfIPlayer: any(object: any): object is IPlayer => {
+  return object.name in object;
+}
+
 interface IPlayerObject {
   name: string;
   cards: ICard[];
   result?: IResult;
+}
+
+interface ITablePlayer {
+  name: string;
+  id: string;
+  credits: number;
+}
+
+interface ITableObject {
+  id: string;
+  players: ITablePlayer[]
 }
 
 interface IWinner {
@@ -29,4 +50,4 @@ interface IWinner {
   result: IResult;
 }
 
-export { ICard, IPlayer, IPlayerObject, IResult, IWinner };
+export { ICard, IDealer, IPlayer, IPlayerObject, IResult, IWinner, ITableObject };
