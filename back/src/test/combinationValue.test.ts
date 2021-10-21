@@ -1,25 +1,93 @@
 import { combinationValue } from "../scripts/combinations/combinationValue";
+import {
+  royalflush,
+  straightflush,
+  flush,
+  quads,
+  fullhouse,
+  straight,
+  trips,
+  twopair,
+  pair,
+  highCard,
+} from "./possibleCombos";
 
-// TODO: work on this
-describe('Create Card', () => {
-  test('Card should be 2 of Hearts', () => {
+describe('Test values coming from combinationValue', () => {
+  test('Royal Flush should be same as value', () => {
 
+    const res = combinationValue(royalflush, 9);
 
-    const flush = [
-      { value: 2, suit: 'Clubs' },
-      { value: 4, suit: 'Clubs' },
-      { value: 3, suit: 'Clubs' },
-      { value: 2, suit: 'Clubs' },
-      { value: 13, suit: 'Hearts' },
-      { value: 4, suit: 'Clubs' },
-      { value: 5, suit: 'Diamonds' },
-    ];
-
-    const res = combinationValue(cards, 9);
-
-    console.log(res)
-
-    expect(cards).toEqual(testCard);
+    expect(res).toEqual(90000000100);
   });
 
+  test('Straight Flush should be same as value', () => {
+
+    const res = combinationValue(straightflush, 8);
+
+    expect(res).toEqual(80000000090);
+  });
+
+  test('Quads should be same as value', () => {
+
+    const res = combinationValue(quads, 7);
+
+    expect(res).toEqual(70000000020);
+  });
+
+  test('Full House should be same as value', () => {
+
+    const res = combinationValue(fullhouse, 6);
+
+    expect(res).toEqual(60000000022);
+  });
+
+  test('Flush should be same as value', () => {
+
+    const res = combinationValue(flush, 5);
+
+    expect(res).toEqual(50000000046);
+  });
+
+  test('Straight should be same as value', () => {
+
+    const res = combinationValue(straight, 4);
+
+    expect(res).toEqual(40000000062);
+  });
+
+  test('Trips should be same as value', () => {
+
+    const res = combinationValue(trips, 3);
+
+    expect(res).toEqual(30000000026);
+  });
+
+  test('Two pair should be same as value', () => {
+
+    const res = combinationValue(twopair, 2);
+
+    expect(res).toEqual(20000000028);
+  });
+
+  test('Pair should be same as value', () => {
+
+    const res = combinationValue(pair, 1);
+
+    expect(res).toEqual(10000000050);
+  });
+
+  test('High card should be same as value', () => {
+
+    const res = combinationValue(highCard, 0);
+
+    expect(res).toEqual(55);
+  });
+
+
+  test('Pair should be not be same as value', () => {
+
+    const res = combinationValue(pair, 1);
+
+    expect(res).not.toEqual(987654321);
+  });
 });
