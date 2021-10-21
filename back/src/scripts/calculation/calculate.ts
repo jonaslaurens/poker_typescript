@@ -1,11 +1,10 @@
-import { COMBINATIONS } from "../../constants/combinations";
-import { ICard, IResult } from "../../types/types";
+import { COMBINATIONS } from "../../constants/constants";
 import { combinationValue } from "../combinations/combinationValue";
 import { countCards } from "../combinations/countCards";
 import { countSuits } from "../combinations/countSuits";
+import { ICard, IResult } from "../../types/types";
 import { isFlush } from "../combinations/isFlush";
 import { isFullHouse } from "../combinations/isFullHouse";
-import { isHighCard } from "../combinations/isHighCard";
 import { isPair } from "../combinations/isPair";
 import { isRoyalFlush } from "../combinations/isRoyalFlush";
 import { isStraight } from "../combinations/isStraight";

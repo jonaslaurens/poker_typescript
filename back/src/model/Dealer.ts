@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { SUITS, VALUES } from '../constants/cardValues';
+import { SUITS, VALUES } from '../constants/constants';
 import { ICard } from '../types/types';
 import { Card } from './Card';
 
