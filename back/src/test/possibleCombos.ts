@@ -9,13 +9,13 @@ export const royalflush = [
 ];
 
 export  const straightflush = [
-  { value: 1, suit: 'Clubs' },
+  { value: 8, suit: 'Clubs' },
   { value: 3, suit: 'Diamonds' },
   { value: 4, suit: 'Diamonds' },
   { value: 10, suit: 'Clubs' },
+  { value: 9, suit: 'Clubs' },
   { value: 11, suit: 'Clubs' },
   { value: 12, suit: 'Clubs' },
-  { value: 13, suit: 'Clubs' },
 ];
 
 export const quads = [
@@ -50,7 +50,7 @@ export const flush = [
 
 export const straight = [
   { value: 2, suit: 'Clubs' },
-  { value: 3, suit: 'Clubs' },
+  { value: 3, suit: 'Spades' },
   { value: 4, suit: 'Clubs' },
   { value: 5, suit: 'Clubs' },
   { value: 6, suit: 'Hearts' },
@@ -60,12 +60,12 @@ export const straight = [
 
 export const trips = [
   { value: 2, suit: 'Clubs' },
-  { value: 8, suit: 'Clubs' },
-  { value: 3, suit: 'Clubs' },
-  { value: 5, suit: 'Clubs' },
-  { value: 2, suit: 'Hearts' },
-  { value: 4, suit: 'Clubs' },
   { value: 2, suit: 'Diamonds' },
+  { value: 2, suit: 'Hearts' },
+  { value: 8, suit: 'Hearts' },
+  { value: 3, suit: 'Clubs' },
+  { value: 5, suit: 'Spades' },
+  { value: 4, suit: 'Clubs' },
 ];
 
 export const twopair = [
@@ -84,7 +84,7 @@ export const pair = [
   { value: 3, suit: 'Clubs' },
   { value: 2, suit: 'Hearts' },
   { value: 13, suit: 'Hearts' },
-  { value: 4, suit: 'Clubs' },
+  { value: 8, suit: 'Clubs' },
   { value: 5, suit: 'Diamonds' },
 ];
 
@@ -92,8 +92,8 @@ export const highCard = [
  { value: 2, suit: 'Clubs' },
  { value: 4, suit: 'Clubs' },
  { value: 3, suit: 'Clubs' },
- { value: 2, suit: 'Hearts' },
+ { value: 8, suit: 'Hearts' },
  { value: 13, suit: 'Hearts' },
- { value: 4, suit: 'Clubs' },
+ { value: 7, suit: 'Clubs' },
  { value: 5, suit: 'Diamonds' }
 ];
